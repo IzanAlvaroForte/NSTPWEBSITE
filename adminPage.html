@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Site</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="lg:flex">
+    <section class="flex flex-col lg:flex-row w-full min-h-screen bg-white">
+        <!-- Mobile Header -->
+        <div class="flex justify-between items-center lg:hidden">
+            <div class="flex items-center ml-2 mt-2 mb-2">
+                <img src="images/nstp_logo.png" alt="NSTP Logo" class="w-20 object-contain md:w-24">
+                <h1 class="font-bold ml-2 text-4xl text-[#336021] md:text-5xl">Eco-Cycle</h1>
+            </div>
+            <button id="menu-toggle" class="lg:hidden p-2 text-4xl md:text-5xl">☰</button>
+        </div>
+
+        <!-- Overlay (mobile only) -->
+        <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden hidden"></div>
+
+        <!-- Sidebar -->
+        <nav id="Mobile-menu" class="
+            fixed lg:static
+            top-0 left-0
+            transform lg:transform-none
+            -translate-x-full lg:translate-x-0
+            md:w-[320px] h-full
+            bg-[#336021] backdrop-blur-sm lg:backdrop-blur-0
+            bg-opacity-90 lg:bg-opacity-100
+            z-50
+            transition-transform duration-300 ease-in-out
+            flex flex-col
+            lg:w-[330px]
+        ">
+            <!-- Desktop Logo -->
+            <div class="hidden lg:flex items-center p-4 border-b border-white/20">
+                <img src="images/nstp_logo.png" alt="NSTP Logo" class="w-16 object-contain lg:w-24">
+                <h1 class="font-bold ml-2 text-2xl text-white lg:text-4xl lg:font-bold">Eco-Cycle</h1>
+            </div>
+
+            <!-- Close Button (mobile only) -->
+            <span id="close-menu" class="absolute top-3 right-3 text-white text-4xl cursor-pointer lg:hidden">×</span>
+
+            <!-- Menu Content -->
+            <div class="flex flex-col text-white w-full mt-4 px-4 overflow-y-auto">
+                <!-- Green Pages -->
+                <div class="mb-4">
+                    <div class="menu-header flex items-center justify-between cursor-pointer lg:cursor-auto py-2 ">
+                        <div class="flex items-center">
+                            <img src="images/nstp_logo.png" alt="" class="w-10 object-contain md:w-14 lg:w-16">
+                            <p class="text-2xl ml-2 md:text-3xl">Green Pages</p>
+                        </div>
+                        <i class='bx bxs-chevron-down text-2xl transition-transform duration-300 lg:hidden hidden'></i>
+                    </div>
+                    <div class="submenu overflow-hidden transition-all duration-300 max-h-0 lg:max-h-[500px]">
+                        <a href="#" class="block w-full text-lg py-2 pl-12 hover:bg-[#3e7a25] md:text-2xl">Records</a>
+                        <a href="#" class="block w-full text-lg py-2 pl-12 hover:bg-[#3e7a25] md:text-2xl">Create records</a>
+                        <a href="#" class="block w-full text-lg py-2 pl-12 hover:bg-[#3e7a25] md:text-2xl">Update records</a>
+                    </div>
+                </div>
+
+                <!-- Basura-Eco Hub -->
+                <div class="mb-4">
+                    <div class="flex items-center cursor-pointer hover:bg-[#3e7a25] py-2">
+                        <img src="images/Basure-Eco hub logo.jpg" alt="" class="w-10 object-contain md:w-14 lg:w-16">
+                        <p class="text-2xl ml-2 md:text-3xl">Basura-Eco Hub</p>
+                    </div>
+                </div>
+
+                <!-- EcoSwap -->
+                <div class="mb-4">
+                    <div class="menu-header flex items-center justify-between cursor-pointer lg:cursor-auto py-2">
+                        <div class="flex items-center">
+                            <img src="images/ECO-SWAP logo (2).png" alt="" class="w-10 object-contain md:w-14 lg:w-16">
+                            <p class="text-2xl ml-2 md:text-3xl">EcoSwap</p>
+                        </div>
+                        <i class='bx bxs-chevron-down text-2xl transition-transform duration-300 lg:hidden hidden'></i>
+                    </div>
+                    <div class="submenu overflow-hidden transition-all duration-300 max-h-0 lg:max-h-[500px]">
+                        <a href="#" class="block w-full text-lg py-2 pl-12 hover:bg-[#3e7a25] md:text-2xl">Building...</a>
+                        <a href="#" class="block w-full text-lg py-2 pl-12 hover:bg-[#3e7a25] md:text-2xl">Building...</a>
+                        <a href="#" class="block w-full text-lg py-2 pl-12 hover:bg-[#3e7a25] md:text-2xl">Building...</a>
+                    </div>
+                </div>
+
+                <!-- History -->
+                <div class="mb-4">
+                    <div class="menu-header flex items-center justify-between cursor-pointer lg:cursor-auto py-2">
+                        <div class="flex items-center">
+                            <img src="images/historyTime.png" alt="" class="w-10 object-contain md:w-14 lg:w-16">
+                            <p class="text-2xl ml-2 md:text-3xl">History</p>
+                        </div>
+                        <i class='bx bxs-chevron-down text-2xl transition-transform duration-300 lg:hidden hidden'></i>
+                    </div>
+                    <div class="submenu overflow-hidden transition-all duration-300 max-h-0 lg:max-h-[500px]">
+                        <a href="#" class="block w-full text-lg py-2 pl-12 hover:bg-[#3e7a25] md:text-2xl">Record Log</a>
+                        <a href="#" class="block w-full text-lg py-2 pl-12 hover:bg-[#3e7a25] md:text-2xl">Swap Log</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
