@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in Administrator</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen">
+    
+    <main class="flex flex-col bg-white
+    justify-center
+    rounded-xl shadow-2xl
+    h-[80vh] w-[85vw] lg:bg-[#336021]
+    lg:flex-row lg:justify-around ">
+        <div class="flex flex-col items-center 
+        justify-center
+        mb-3 h-[24vh] w-full
+        lg:h-[80vh] lg:w-[50vw] lg:bg-[#336021]
+        lg:flex-row lg:items-center lg:justify-center">
+            <div>
+                <img src="loginIMG/loginNSTPlogo.png"
+                alt="nsts logo"
+                class="w-32 h-32
+                lg:w-[16rem] lg:h-[16rem]">
+            </div>
+            <p class=" text-4xl font-bold 
+            text-center text-[#336021]
+            lg:text-white
+            lg:text-6xl">
+                Eco-Cycle
+            </p>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+            <div class="flex flex-col items-center 
+            justify-center w-full h-[18vh]
+            mb">
+                <div class="flex flex-col items-center justify-center gap-y-1">
+                    <p class="text-2xl font-bold 
+                    text-center text-[#336021]
+                    lg:text-white lg:text-4xl">
+                        Welcome Admin
+                    </p>
+                    <p class="text-lg text-center 
+                    text-[#336021]
+                    lg:text-white lg:text-2xl">
+                        log-in to Dashboard
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col w-full
+            items-center justify-center
+            mb-2">
+                <div class="flex flex-col 
+                items-center justify-center gap-y-2.5 
+                w-full h-[18vh]">
+                    <input type="text" placeholder="Username"
+                    class="w-[80%] 
+                    h-8 rounded-md border-2 border-[#336021]
+                    bg-[#D9D9D9] placeholder:text-[#000000]
+                    p-1 lg:h-[6vh]">
+                    <input type="password" placeholder="Password"
+                    class="w-[80%] 
+                    h-8 rounded-md border-2 border-[#336021]
+                    bg-[#D9D9D9] placeholder:text-[#000000]
+                    p-1 lg:h-[6vh]">
+                </div>
+            </div>
+            <div class="flex flex-col items-center 
+            justify-center 
+            w-[32vw] h-[8vh] rounded-xl">
+                <button type="button" class="text-xl  
+                text-center text-white
+                bg-[#336021] w-full h-full rounded-xl
+                active:bg-[#59a03c]
+                lg:bg-white lg:text-[#336021]
+                lg:text-2xl lg:font-bold lg:active:bg-[#336021]
+                lg:w-[50%]">
+                    Log in
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="loginScript.js"></script>
+</body>
+</html>
